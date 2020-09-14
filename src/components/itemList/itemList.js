@@ -4,15 +4,13 @@ import Spinner from '../spinner';
 
 export default class ItemList extends Component {
 
-    // gotService = new gotService();
-
     state = {
         itemList: null
     }
 
     componentDidMount() {
         const {getData} = this.props;
-        // this.gotService.getAllCharacters()
+
         getData()
             .then( (itemList) => {
                 this.setState({
@@ -47,7 +45,7 @@ export default class ItemList extends Component {
 
         return (
             <ul className="item-list list-group">
-                {items}                
+                {items}
             </ul>
         );
     }
